@@ -40,16 +40,26 @@ namespace TestWork
                 User user = new User(NameBox.Text, LastNameBox.Text, PrefixesBox.Text);
                 ResultText.Text = stringCorrector.FormattingNames(user);
             }
-        }        
-
+        }
+        //Метод для перевірки на коректний ввід даних
+        private void DelSpace(TextBox textBox)
+        {
+            string text = textBox.Text;
+            if (text.Contains(" "))
+            {
+                MessageBox.Show("Виявлено пробіли! У цьому полі пробіли недоступні і видаляються.");
+                text = text.Replace(" ", "");
+                textBox.Text = text;
+            }
+        }
         //Івенти які перевіряють поля за його зміни.
         private void NameBox_TextChanged(object sender, EventArgs e)
         {
-            stringCorrector.DelSpace(NameBox);
+            DelSpace(NameBox);
         }  
         private void LastNameBox_TextChanged(object sender, EventArgs e)
         {
-            stringCorrector.DelSpace(LastNameBox);
+            DelSpace(LastNameBox);
         }
         //Копіювання результату програми
         private void ResultText_Click(object sender, EventArgs e)

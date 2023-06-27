@@ -55,17 +55,6 @@ namespace TestWork.Service
 
             return value;
         }
-
-        //Метод для перевірки на коректний ввід даних
-        public void DelSpace(TextBox textBox)
-        {
-            string text = textBox.Text;
-            if (text.Contains(" "))
-            {
-                MessageBox.Show("Виявлено пробіли! У цьому полі пробіли недоступні і видаляються.");
-                text = text.Replace(" ", "");
-                textBox.Text = text;
-            }
-        }
+        
     }
 }
