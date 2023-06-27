@@ -57,7 +57,7 @@ namespace TestWork.Service
         }
 
         //Метод для перевірки на коректний ввід даних
-        private void DelSpace(TextBox textBox)
+        public void DelSpace(TextBox textBox)
         {
             string text = textBox.Text;
             if (text.Contains(" "))
