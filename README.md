@@ -54,7 +54,7 @@ public class User
             return user.GetFullName();
         }
 
-//Метод для який першу букву піднімае у вархній регістр а інші у ніжній.
+//Метод який першу букву піднімае у вархній регістр а інші у ніжній.
         public string GetCorrectValue(string value)
         {
             return char.ToUpper(value[0]) + value.Substring(1).ToLower();
